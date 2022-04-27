@@ -15,7 +15,6 @@
       <ul class="navigation">
           <a href="index.html"><li>Home</li></a>
           <a href="about.html"><li>About Me</li></a>
-          <a href="https://quest.mit.edu" target="_blank"><li>Quest</li></a>
           <a href="#" onclick="div_show()"><li>Contact</li></a>
       </ul>
     </nav>
@@ -31,14 +30,17 @@
 
   <!-- Contact popup starts here -->
   <div id="contact-popup">
-    <form action="index.html" id="form" name="form">
+    <form id="form" name="form" accept-charset="utf-8" action="http://formspree.io/kvg0@mit.edu" method="post">
     <img id="close" src="images/close-x.png" style="width:30px;height:30px;" onclick ="div_hide()">
-    <input id="name" name="name" placeholder="Name" type="text">
-    <input id="email" name="email" placeholder="Email" type="text">
-    <textarea id="msg" name="message"></textarea>
-    <a href="Javascript:%20check_empty()" id="submit">Submit</a>
+      <input type="text" name="name" id="name" placeholder="Name" required="">
+      <input type="email" name="_replyto" id="email" placeholder="Email" required="">
+      <textarea rows="5" name="message" id="msg" required=""></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    <input type="submit" id="submit" value="SEND">
     </form>
   </div>
-<script src="js/main.js"></script>
+  <div id="panel">
+
 </body>
+<script src="js/main.js"></script>
 </html>
